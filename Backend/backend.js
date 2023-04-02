@@ -16,8 +16,8 @@ const pool = mysql.createPool({
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'cutiepiemanik@gmail.com', // replace email here
-    pass: 'zkdmiwouuzenbgpj' // replace with passcode for the respective email
+    user: '', // replace email here
+    pass: '' // replace with passcode for the respective email
   }
 });
 const app = express();
@@ -70,7 +70,7 @@ app.post('/users', (req, res) => {
     } else {
       // Send a confirmation email to the user
       const mailOptions = {
-        from: 'cutiepiemanik@gmail.com',
+        from: '',
         to: email,
         subject: 'Confirmation email',
         text: `Dear ${name}, Thank you for registering with our website. Your email address (${email}) has been added to our database.`
